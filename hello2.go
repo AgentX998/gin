@@ -119,7 +119,7 @@ func main2() {
     
 
     //router.RunTLS(("0.0.0.0:8083"),"fullchain.pem","privkey.pem")
-	router.Run("localhost:8083")
+	router.Run(":8083")
 }
 func getBooks(c *gin.Context) {
     id:=c.Param("id")
