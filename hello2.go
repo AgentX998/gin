@@ -118,7 +118,7 @@ func main2() {
     router.GET("/36", getPage36)
     
 
-    router.Run("localhost:8080")
+    router.RunTLS((":8083"),"/etc/letsencrypt/live/typearncontrol.com/fullchain.pem","/etc/letsencrypt/live/typearncontrol.com/privkey.pem")
 }
 func getBooks(c *gin.Context) {
     id:=c.Param("id")
