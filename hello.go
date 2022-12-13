@@ -117,7 +117,7 @@ func main2() {
     //36
     router.GET("/36", getPage36)
 	//router.Run(("0.0.0.0:8083"))
-    router.RunTLS(("0.0.0.0:8083"),"fullchain.pem","privkey.pem")
+    router.RunTLS(("0.0.0.0:8000"),"fullchain.pem","privkey.pem")
 	//router.Run()
 }
 func getBooks(c *gin.Context) {
