@@ -1,4 +1,5 @@
 package main
+
 import (
     //"github.com/gin-contrib/static"
 
@@ -73,7 +74,7 @@ func main2() {
     //4
     router.GET("/4", getPage4)
     //5to11
-    router.GET("/5", getPage5)
+    router.GET("/session-1-week-1", getPage5)
     //12
     router.GET("/12", getPage12)
     //13
@@ -93,7 +94,7 @@ func main2() {
     //21
     router.GET("/21", getPage21)
     //22
-    router.GET("/22", getPage22)
+    router.GET("/section-a", getPage22)
     //24
     router.GET("/24", getPage24)
     //25
@@ -106,6 +107,7 @@ func main2() {
     router.GET("/28", getPage28)
     //30
     router.GET("/30", getPage30)
+    router.GET("/ex1", getPageex1)
     //33
     router.GET("/33", getPage33)
     //34

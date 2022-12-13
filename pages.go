@@ -68,7 +68,7 @@ func getPage5(c *gin.Context) {
 	c.HTML(200, "video-layout-new.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPage12(c *gin.Context) {
-	c.HTML(200, "health-chart.html", gin.H{"code": "Success", "message": "Page found"})
+	c.HTML(200, "health-chart.html", gin.H{"calend": calen})
 }
 func getPage13(c *gin.Context) {
 	c.HTML(200, "health-chart-table.html", gin.H{"code": "Success", "message": "Page found"})
@@ -114,6 +114,9 @@ func getPage28(c *gin.Context) {
 }
 func getPage30(c *gin.Context) {
 	c.HTML(200, "anxiety-insight-1.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPageex1(c *gin.Context) {
+	c.HTML(200, "ex1.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPage33(c *gin.Context) {
 	c.HTML(200, "support-walkin.html", gin.H{"code": "Success", "message": "Page found"})
