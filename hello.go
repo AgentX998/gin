@@ -121,6 +121,8 @@ func main2() {
     router.GET("/n3", getPagen3)
     router.GET("/n4", getPagen4)
     router.GET("/n5", getPagen5)
+    router.GET("/n6", getPagen6)
+    router.GET("/n7", getPagen7)
 	//router.Run(("0.0.0.0:8083"))
     router.RunTLS(("0.0.0.0:8000"),"fullchain.pem","privkey.pem")
 	//router.Run()
@@ -321,11 +323,17 @@ func getPagen2(c *gin.Context) {
 	c.HTML(200, "journal.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPagen3(c *gin.Context) {
-	c.HTML(200, "mind-body-complete.html", gin.H{"code": "Success", "message": "Page found"})
+	c.HTML(200, "mind-body.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPagen4(c *gin.Context) {
 	c.HTML(200, "sleepora-quiz.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPagen5(c *gin.Context) {
 	c.HTML(200, "video.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen6(c *gin.Context) {
+	c.HTML(200, "benefits.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen7(c *gin.Context) {
+	c.HTML(200, "insight-program-new.html", gin.H{"code": "Success", "message": "Page found"})
 }
