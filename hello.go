@@ -105,9 +105,9 @@ func main2() {
     router.GET("/27", getPage27)
     //28
     router.GET("/28", getPage28)
-    //30
-    router.GET("/30", getPage30)
-    router.GET("/ex1", getPageex1)
+    //29
+    router.GET("/29", getPage29)
+    router.GET("/ex1", getPagen5)
     //33
     router.GET("/33", getPage33)
     //34
@@ -116,6 +116,11 @@ func main2() {
     router.GET("/35", getPage35)
     //36
     router.GET("/36", getPage36)
+    router.GET("/n1", getPagen1)
+    router.GET("/n2", getPagen2)
+    router.GET("/n3", getPagen3)
+    router.GET("/n4", getPagen4)
+    router.GET("/n5", getPagen5)
 	//router.Run(("0.0.0.0:8083"))
     router.RunTLS(("0.0.0.0:8000"),"fullchain.pem","privkey.pem")
 	//router.Run()
@@ -258,7 +263,7 @@ func getPage14(c *gin.Context) {
 	c.HTML(200, "health-chart-dashboard.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPage15(c *gin.Context) {
-	c.HTML(200, "calendar.html", gin.H{"code": "Success", "message": "Page found"})
+	c.HTML(200, "calander.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPage17(c *gin.Context) {
 	c.HTML(200, "journal-day.html", gin.H{"code": "Success", "message": "Page found"})
@@ -293,11 +298,8 @@ func getPage27(c *gin.Context) {
 func getPage28(c *gin.Context) {
 	c.HTML(200, "stress.html", gin.H{"code": "Success", "message": "Page found"})
 }
-func getPage30(c *gin.Context) {
-	c.HTML(200, "anxiety-insight-1.html", gin.H{"code": "Success", "message": "Page found"})
-}
-func getPageex1(c *gin.Context) {
-	c.HTML(200, "ex1.html", gin.H{"code": "Success", "message": "Page found"})
+func getPage29(c *gin.Context) {
+	c.HTML(200, "resources-d.html", gin.H{"code": "Success", "message": "Page found"})
 }
 func getPage33(c *gin.Context) {
 	c.HTML(200, "support-walkin.html", gin.H{"code": "Success", "message": "Page found"})
@@ -310,4 +312,20 @@ func getPage35(c *gin.Context) {
 }
 func getPage36(c *gin.Context) {
 	c.HTML(200, "support-communicate.html", gin.H{"code": "Success", "message": "Page found"})
+}
+
+func getPagen1(c *gin.Context) {
+	c.HTML(200, "anxiety-and-stress-reduction-tools.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen2(c *gin.Context) {
+	c.HTML(200, "journal.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen3(c *gin.Context) {
+	c.HTML(200, "mind-body-complete.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen4(c *gin.Context) {
+	c.HTML(200, "sleepora-quiz.html", gin.H{"code": "Success", "message": "Page found"})
+}
+func getPagen5(c *gin.Context) {
+	c.HTML(200, "video.html", gin.H{"code": "Success", "message": "Page found"})
 }

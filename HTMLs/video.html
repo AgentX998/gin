@@ -35,45 +35,39 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.plyr.io/3.6.2/plyr.css"
+    />
   </head>
 
   <body>
-    <div class="wrapper-new">
-      <div class="wrapper-holder resource">
+    <div class="wrapper-new video_wr">
+      <div class="wrapper-holder min-height">
         <div class="holder-new">
           <div class="search-box-new">
             <button><img src="img/search-1.png" /></button>
             <input type="search" placeholder="Search" />
           </div>
-          <h2>Noticing no benefit from program</h2>
-          <div class="stick-holder">
-            <div class="column">
-              <div class="box-1">
-                <img src="img/svg/investigation 1.svg" alt="image" />
-                <span>Evidence Base</span>
-              </div>
-              <div class="box-1">
-                <img src="img/svg/hospital 2.svg" alt="image" />
-                <span>Check In</span>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box-1">
-                <span>Noticing no benifit from program</span>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box-1">
-                <img src="img/svg/clock 2.svg" alt="image" />
-                <span>Time</span>
-              </div>
-              <div class="box-1">
-                <img src="img/svg/Resources 3.svg" alt="image" />
-                <span>Resources</span>
+
+          <div class="video-slider">
+            <div class="slick-carousel">
+              <div>
+                <h2>Video Name</h2>
+                <a href="#">
+                  <iframe
+                    src="https://www.youtube.com/embed/kv98K7V_28Q"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </a>
               </div>
             </div>
           </div>
-
+          
           <!-- <div class="right-bar new">
             <div class="logo">
               <a href="#"><img src="img/logo.png" /></a>
@@ -84,6 +78,7 @@
             <div class="bar-holder">
               <div class="alert-holder set">
                 <a href="#">
+                  
                   <img
                     src="img/svg/setting-new.svg"
                     alt="image"
@@ -103,7 +98,7 @@
                 </a>
               </div>
 
-              <div class="alert-holder">
+              <div class="alert-holder" style="opacity: 0">
                 <a href="#">
                   <img src="img/svg/volume.svg" alt="image" />
                 </a>
@@ -133,7 +128,7 @@
             fill="currentColor"
           />
         </svg>
-        <div class="sidebar__new__entry__special__text">Support Video</div>
+        <div class="sidebar__new__entry__special__text">Sleep IQ Video</div>
       </a>
 
       <a href="#" class="sidebar__new__entry">
@@ -272,11 +267,217 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
+    <script>
+      $(".slick-carousel").slick({
+        infinite: true,
+        slidesToShow: 1, // Shows a three slides at a time
+        slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+        arrows: true, // Adds arrows to sides of slider
+        dots: false, // Adds the dots on the bottom
+      });
+    </script>
+    <script>
+      $(".slide-index").slick({
+        infinite: true,
+        // autoplay:true,
+        // autoplaySpeed:1500,
+        slidesToShow: 1, // Shows a three slides at a time
+        slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+        arrows: false, // Adds arrows to sides of slider
+        dots: false, // Adds the dots on the bottom
+      });
+    </script>
     <script type="text/javascript">
       $(document).ready(function () {
         $(".menu").click(function () {
           $("body").toggleClass("active");
         });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".left-menu").click(function () {
+          $("body").toggleClass("left-active");
+        });
+      });
+    </script>
+    <script>
+      // Mythium Archive: https://archive.org/details/mythium/
+
+      jQuery(function ($) {
+        "use strict";
+        var supportsAudio = !!document.createElement("audio").canPlayType;
+        if (supportsAudio) {
+          // initialize plyr
+          var player = new Plyr("#audio1", {
+            controls: [
+              "restart",
+              "play",
+              "progress",
+              "current-time",
+              "duration",
+              "mute",
+              "volume",
+              "download",
+            ],
+          });
+          // initialize playlist and controls
+          var index = 0,
+            playing = false,
+            mediaPath = "https://archive.org/download/mythium/",
+            extension = "",
+            tracks = [
+              {
+                track: 1,
+                name: "All This Is - Joe L.'s",
+                duration: "2:46",
+                file: "JLS_ATI",
+              },
+              {
+                track: 2,
+                name: "The Forsaken - Broadwing ",
+                duration: "8:30",
+                file: "BS_TF",
+              },
+              {
+                track: 3,
+                name: "All The King's Men - Broadwing ",
+                duration: "5:01",
+                file: "BS_ATKM",
+              },
+              {
+                track: 4,
+                name: "The Forsaken - Broadwing",
+                duration: "8:31",
+                file: "BSFM_TF",
+              },
+              {
+                track: 5,
+                name: "All The King's Men - Broadwing",
+                duration: "5:05",
+                file: "BSFM_ATKM",
+              },
+            ],
+            buildPlaylist = $.each(tracks, function (key, value) {
+              var trackNumber = value.track,
+                trackName = value.name,
+                trackDuration = value.duration;
+              if (trackNumber.toString().length === 1) {
+                trackNumber = "0" + trackNumber;
+              }
+              $("#plList").append(
+                '<li> \
+                    <div class="plItem"> \
+                        <span class="plNum">' +
+                  trackNumber +
+                  '.</span> \
+                        <span class="plTitle">' +
+                  trackName +
+                  '</span> \
+                        <span class="plLength">' +
+                  trackDuration +
+                  "</span> \
+                    </div> \
+                </li>"
+              );
+            }),
+            trackCount = tracks.length,
+            npAction = $("#npAction"),
+            npTitle = $("#npTitle"),
+            audio = $("#audio1")
+              .on("play", function () {
+                playing = true;
+                npAction.text("Now Playing...");
+              })
+              .on("pause", function () {
+                playing = false;
+                npAction.text("Paused...");
+              })
+              .on("ended", function () {
+                npAction.text("Paused...");
+                if (index + 1 < trackCount) {
+                  index++;
+                  loadTrack(index);
+                  audio.play();
+                } else {
+                  audio.pause();
+                  index = 0;
+                  loadTrack(index);
+                }
+              })
+              .get(0),
+            btnPrev = $("#btnPrev").on("click", function () {
+              if (index - 1 > -1) {
+                index--;
+                loadTrack(index);
+                if (playing) {
+                  audio.play();
+                }
+              } else {
+                audio.pause();
+                index = 0;
+                loadTrack(index);
+              }
+            }),
+            btnNext = $("#btnNext").on("click", function () {
+              if (index + 1 < trackCount) {
+                index++;
+                loadTrack(index);
+                if (playing) {
+                  audio.play();
+                }
+              } else {
+                audio.pause();
+                index = 0;
+                loadTrack(index);
+              }
+            }),
+            li = $("#plList li").on("click", function () {
+              var id = parseInt($(this).index());
+              if (id !== index) {
+                playTrack(id);
+              }
+            }),
+            loadTrack = function (id) {
+              $(".plSel").removeClass("plSel");
+              $("#plList li:eq(" + id + ")").addClass("plSel");
+              npTitle.text(tracks[id].name);
+              index = id;
+              audio.src = mediaPath + tracks[id].file + extension;
+              updateDownload(id, audio.src);
+            },
+            updateDownload = function (id, source) {
+              player.on("loadedmetadata", function () {
+                $('a[data-plyr="download"]').attr("href", source);
+              });
+            },
+            playTrack = function (id) {
+              loadTrack(id);
+              audio.play();
+            };
+          extension = audio.canPlayType("audio/mpeg")
+            ? ".mp3"
+            : audio.canPlayType("audio/ogg")
+            ? ".ogg"
+            : "";
+          loadTrack(index);
+        } else {
+          // no audio support
+          $(".column").addClass("hidden");
+          var noSupport = $("#audio1").text();
+          $(".container").append('<p class="no-support">' + noSupport + "</p>");
+        }
+      });
+    </script>
+    <script>
+      ClassicEditor.create(document.querySelector("#editor"));
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(document.getElementById("editor").value);
       });
     </script>
   </body>
